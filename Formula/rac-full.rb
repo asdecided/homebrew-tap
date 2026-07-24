@@ -4,16 +4,16 @@ class RacFull < Formula
   license "Apache-2.0"
 
   if OS.mac?
-    url "https://github.com/itsthelore/rac-core/releases/download/v0.23.0/asdecided-aarch64-apple-darwin.tar.gz"
-    sha256 "00477139d35e823cd5b6dd345622fc706c3423b53e3fdae6ed506484fb3c3777"
+    url "https://github.com/itsthelore/rac-core/releases/download/v0.23.1/asdecided-aarch64-apple-darwin.tar.gz"
+    sha256 "40d7129541609cbcf967f7d7d453e7689412bbaac81aa8d3c84e636367804628"
   else
-    url "https://github.com/itsthelore/rac-core/releases/download/v0.23.0/asdecided-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "d9294f82df8b04c7ac4549baf0d05e9bf3cf7791fb9c59cabcd8ec1ea35a9c18"
+    url "https://github.com/itsthelore/rac-core/releases/download/v0.23.1/asdecided-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "51cce8025a7cb2f8b2caea93a8ea71be0ad8c5c316fd0ecced688267bf97b8ac"
   end
 
   def install
-    odie "The v0.23.0 macOS release supports Apple Silicon only." if OS.mac? && !Hardware::CPU.arm?
-    odie "The v0.23.0 Linux release supports x86_64 only." if OS.linux? && !Hardware::CPU.intel?
+    odie "The v0.23.1 macOS release supports Apple Silicon only." if OS.mac? && !Hardware::CPU.arm?
+    odie "The v0.23.1 Linux release supports x86_64 only." if OS.linux? && !Hardware::CPU.intel?
 
     bin.install "decided"
     bin.install "decided-mcp"
