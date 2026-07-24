@@ -1,7 +1,6 @@
 class Decided < Formula
   desc "Native AsDecided requirements-as-code CLI and read-only MCP server"
   homepage "https://github.com/itsthelore/rac-core"
-  version "0.23.0"
   license "Apache-2.0"
 
   if OS.mac?
