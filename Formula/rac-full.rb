@@ -8,7 +8,7 @@ class RacFull < Formula
   depends_on "decided"
 
   def install
-    (prefix/"README").write <<~EOS
+    (share/"rac-full"/"manifest.txt").write <<~EOS
       rac-full is the umbrella installation for the RAC toolchain.
       Native commands are provided by the decided dependency.
     EOS
