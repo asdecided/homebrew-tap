@@ -1,0 +1,30 @@
+name: Test formulas
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Add this checkout as a tap
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/itsthelore"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/itsthelore/homebrew-tap"
+          brew trust itsthelore/tap
+
+      - name: Audit formulas
+        run: |
+          brew audit --strict --online itsthelore/tap/decided
+          brew audit --strict --online itsthelore/tap/rac-full
+
+      - name: Install and test rac-full
+        run: |
+          brew install itsthelore/tap/rac-full
+          brew test itsthelore/tap/decided
+          brew test itsthelore/tap/rac-full
+          decided --version
