@@ -18,12 +18,10 @@ jobs:
           brew trust itsthelore/tap
 
       - name: Audit formulas
-        run: |
-          brew audit --strict --online itsthelore/tap/decided
-          brew audit --strict --online itsthelore/tap/rac-full
+        run: brew audit --strict --online itsthelore/tap/asdecided-core
 
-      - name: Install and test rac-full
+      - name: Install and test asdecided-core
         run: |
-          brew install itsthelore/tap/rac-full
-          brew test itsthelore/tap/rac-full
+          brew install itsthelore/tap/asdecided-core
+          brew test itsthelore/tap/asdecided-core
           decided --version
