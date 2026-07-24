@@ -15,6 +15,7 @@ jobs:
         run: |
           mkdir -p "$(brew --repository)/Library/Taps/itsthelore"
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/itsthelore/homebrew-tap"
+          brew trust itsthelore/tap
 
       - name: Audit formulas
         run: |
