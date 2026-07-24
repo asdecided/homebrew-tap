@@ -25,6 +25,5 @@ jobs:
       - name: Install and test rac-full
         run: |
           brew install itsthelore/tap/rac-full
-          brew test itsthelore/tap/decided
           brew test itsthelore/tap/rac-full
           decided --version

@@ -1,17 +1,22 @@
 class RacFull < Formula
   desc "Complete local RAC toolchain"
   homepage "https://github.com/itsthelore"
-  url "https://github.com/itsthelore/rac-core/archive/refs/tags/v0.23.0.tar.gz"
-  sha256 "8f3cd6977c1388aa1fdb4884a4267666f0b7c7f9310da0fc29844e2ce6bb5426"
   license "Apache-2.0"
 
-  depends_on "decided"
+  if OS.mac?
+    url "https://github.com/itsthelore/rac-core/releases/download/v0.23.0/asdecided-aarch64-apple-darwin.tar.gz"
+    sha256 "00477139d35e823cd5b6dd345622fc706c3423b53e3fdae6ed506484fb3c3777"
+  else
+    url "https://github.com/itsthelore/rac-core/releases/download/v0.23.0/asdecided-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "d9294f82df8b04c7ac4549baf0d05e9bf3cf7791fb9c59cabcd8ec1ea35a9c18"
+  end
 
   def install
-    (share/"rac-full"/"manifest.txt").write <<~EOS
-      rac-full is the umbrella installation for the RAC toolchain.
-      Native commands are provided by the decided dependency.
-    EOS
+    odie "The v0.23.0 macOS release supports Apple Silicon only." if OS.mac? && !Hardware::CPU.arm?
+    odie "The v0.23.0 Linux release supports x86_64 only." if OS.linux? && !Hardware::CPU.intel?
+
+    bin.install "decided"
+    bin.install "decided-mcp"
   end
 
   def caveats
@@ -29,7 +34,7 @@ class RacFull < Formula
   end
 
   test do
-    assert_predicate formula_opt_bin("decided")/"decided", :executable?
-    assert_predicate formula_opt_bin("decided")/"decided-mcp", :executable?
+    assert_match version.to_s, shell_output("#{bin}/decided --version")
+    assert_predicate bin/"decided-mcp", :executable?
   end
 end
