@@ -1,7 +1,8 @@
 class RacFull < Formula
   desc "Complete local RAC toolchain"
   homepage "https://github.com/itsthelore"
-  version "0.23.0"
+  url "https://github.com/itsthelore/rac-core/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "8f3cd6977c1388aa1fdb4884a4267666f0b7c7f9310da0fc29844e2ce6bb5426"
   license "Apache-2.0"
 
   depends_on "decided"
