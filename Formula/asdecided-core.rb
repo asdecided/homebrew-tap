@@ -1,13 +1,13 @@
 class AsdecidedCore < Formula
   desc "Native AsDecided engine and read-only MCP server"
-  homepage "https://github.com/itsthelore/asdecided-core"
+  homepage "https://github.com/asdecided/core"
   license "Apache-2.0"
 
   if OS.mac?
-    url "https://github.com/itsthelore/asdecided-core/releases/download/v0.23.1/asdecided-aarch64-apple-darwin.tar.gz"
+    url "https://github.com/asdecided/core/releases/download/v0.23.1/asdecided-aarch64-apple-darwin.tar.gz"
     sha256 "40d7129541609cbcf967f7d7d453e7689412bbaac81aa8d3c84e636367804628"
   else
-    url "https://github.com/itsthelore/asdecided-core/releases/download/v0.23.1/asdecided-x86_64-unknown-linux-gnu.tar.gz"
+    url "https://github.com/asdecided/core/releases/download/v0.23.1/asdecided-x86_64-unknown-linux-gnu.tar.gz"
     sha256 "51cce8025a7cb2f8b2caea93a8ea71be0ad8c5c316fd0ecced688267bf97b8ac"
   end
 
