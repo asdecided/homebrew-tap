@@ -1,23 +1,18 @@
-# Homebrew tap for RAC and AsDecided
+# Homebrew tap for AsDecided
 
-Install the complete local toolchain:
-
-```sh
-brew install itsthelore/tap/rac-full
-```
-
-Or install only the native engine:
+Install the native engine and MCP server:
 
 ```sh
-brew install itsthelore/tap/decided
+brew install asdecided/tap/asdecided-core
 ```
 
-`decided` installs the native `decided` CLI and `decided-mcp` read-only MCP
+`asdecided-core` installs the native `decided` CLI and `decided-mcp` read-only MCP
 server from signed-version GitHub Release archives published by
-[`itsthelore/rac-core`](https://github.com/itsthelore/rac-core).
+[`asdecided/core`](https://github.com/asdecided/core).
 
-`rac-full` is the stable umbrella entry point. Today it includes the native
-engine. RAC CI integrations remain GitHub Actions consumed from
-[`itsthelore/rac-ci`](https://github.com/itsthelore/rac-ci); Python SDK,
-ingestion, and connector companions will be added as their independent
-distributions become release-ready.
+`asdecided-full` is reserved for the complete ecosystem install. It will be
+added only when the SDK, connectors, editors, and other companions have
+independent release artifacts that this tap can install honestly.
+
+CI integrations are GitHub Actions consumed from
+[`asdecided/ci`](https://github.com/asdecided/ci).
