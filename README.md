@@ -16,3 +16,10 @@ independent release artifacts that this tap can install honestly.
 
 CI integrations are GitHub Actions consumed from
 [`asdecided/ci`](https://github.com/asdecided/ci).
+
+Deterministic code enforcement is available directly from the public Sentry
+Action:
+
+```yaml
+- uses: asdecided/sentry@v0.26.0
+```

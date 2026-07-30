@@ -4,16 +4,16 @@ class AsdecidedCore < Formula
   license "Apache-2.0"
 
   if OS.mac?
-    url "https://github.com/asdecided/core/releases/download/v0.25.1/asdecided-aarch64-apple-darwin.tar.gz"
-    sha256 "07d08e0a1474094be353ad243545a5538456adc553a3fdbc0718f5f045cbff02"
+    url "https://github.com/asdecided/core/releases/download/v0.26.0/asdecided-aarch64-apple-darwin.tar.gz"
+    sha256 "239d01eb638433bd45c4ee3c977899eaaac19601b31d1b07c9444992fcd19da1"
   else
-    url "https://github.com/asdecided/core/releases/download/v0.25.1/asdecided-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "6f515983159928d4032ff258ff738dd9885a0d87b21f49fa15c651666b647b80"
+    url "https://github.com/asdecided/core/releases/download/v0.26.0/asdecided-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "4d7f2fa85686af8d1006aa530928f60e2cd3d13d8560b303495f2784d1b8bbed"
   end
 
   def install
-    odie "The v0.25.1 macOS release supports Apple Silicon only." if OS.mac? && !Hardware::CPU.arm?
-    odie "The v0.25.1 Linux release supports x86_64 only." if OS.linux? && !Hardware::CPU.intel?
+    odie "The v0.26.0 macOS release supports Apple Silicon only." if OS.mac? && !Hardware::CPU.arm?
+    odie "The v0.26.0 Linux release supports x86_64 only." if OS.linux? && !Hardware::CPU.intel?
 
     bin.install "decided"
     bin.install "decided-mcp"
