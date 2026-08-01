@@ -4,17 +4,17 @@ class AsdecidedCore < Formula
   license "Apache-2.0"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/asdecided/core/releases/download/v0.26.1/asdecided-aarch64-apple-darwin.tar.gz"
-    sha256 "d90eb14a53f961860f4fe5b76b89a2978356bc9d854d41b08912581c8605733d"
+    url "https://github.com/asdecided/core/releases/download/v0.26.2/asdecided-aarch64-apple-darwin.tar.gz"
+    sha256 "45f6af38274969bda8b773ddc7e380485bb728156d1a826a1cd32b7d98f66a7a"
   elsif OS.mac?
-    url "https://github.com/asdecided/core/releases/download/v0.26.1/asdecided-x86_64-apple-darwin.tar.gz"
-    sha256 "33490680526ee09de7d5a9c0c137eaca49ab8603c3fe5044b009aefa8f6c4728"
+    url "https://github.com/asdecided/core/releases/download/v0.26.2/asdecided-x86_64-apple-darwin.tar.gz"
+    sha256 "6c02a8645ad033dfcaab6cc7c048b7347968db4ce02b972a3c70b3f622de6c0e"
   elsif Hardware::CPU.arm?
-    url "https://github.com/asdecided/core/releases/download/v0.26.1/asdecided-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "ebbf82115bf642da071d37bc2dfe7bbfa630c9e120185815953db489a728f134"
+    url "https://github.com/asdecided/core/releases/download/v0.26.2/asdecided-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "10f7ab61e3485467e30eb033df93d57f294549f30282ffe240b3cfcd7c1eebc6"
   else
-    url "https://github.com/asdecided/core/releases/download/v0.26.1/asdecided-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "b1250260b3b5983cadd113090cf3a57b790c2aa5c2d4673707e1f29aa24ed6ab"
+    url "https://github.com/asdecided/core/releases/download/v0.26.2/asdecided-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "301fefbc56ca56454843d5a109d2e5ae535eeed9fae356985ef4d3a323aa3995"
   end
 
   def install
