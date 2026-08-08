@@ -1,6 +1,6 @@
 class AsdecidedCore < Formula
   desc "Native AsDecided engine and read-only MCP server"
-  homepage "https://github.com/asdecided/core"
+  homepage "https://asdecided.com/"
   license "Apache-2.0"
 
   if OS.mac? && Hardware::CPU.arm?
