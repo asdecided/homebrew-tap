@@ -1,5 +1,7 @@
 # Homebrew tap for AsDecided
 
+[Install guide](https://asdecided.com/docs/vendor/core/quickstart/) · [Product site](https://asdecided.com/) · [Release record](https://asdecided.com/changelog/v0.26.2)
+
 Install the native engine and MCP server:
 
 ```sh
