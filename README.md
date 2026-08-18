@@ -12,6 +12,17 @@ brew install asdecided/tap/asdecided-core
 server from signed-version GitHub Release archives published by
 [`asdecided/core`](https://github.com/asdecided/core).
 
+Install Wayfinder's local execution policy and model-routing gateway:
+
+```sh
+brew install asdecided/tap/wayfinder-router
+```
+
+`wayfinder-router` is built from the immutable tagged Rust source published by
+[`asdecided/WayfinderRouter`](https://github.com/asdecided/WayfinderRouter).
+Installation does not create a policy, start a service, or change provider
+credentials. Begin with `wayfinder-router init` and `wayfinder-router doctor`.
+
 `asdecided-full` is reserved for the complete ecosystem install. It will be
 added only when the SDK, connectors, editors, and other companions have
 independent release artifacts that this tap can install honestly.
