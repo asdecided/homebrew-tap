@@ -18,10 +18,18 @@ jobs:
           brew trust asdecided/tap
 
       - name: Audit formulas
-        run: brew audit --strict --online asdecided/tap/asdecided-core
+        run: |
+          brew audit --strict --online asdecided/tap/asdecided-core
+          brew audit --strict --online asdecided/tap/wayfinder-router
 
       - name: Install and test asdecided-core
         run: |
           brew install asdecided/tap/asdecided-core
           brew test asdecided/tap/asdecided-core
           decided --version
+
+      - name: Install and test wayfinder-router
+        run: |
+          brew install asdecided/tap/wayfinder-router
+          brew test asdecided/tap/wayfinder-router
+          wayfinder-router --version
