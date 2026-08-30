@@ -1,9 +1,10 @@
 class WayfinderRouter < Formula
   desc "Local execution policy for AI model routing"
   homepage "https://github.com/asdecided/WayfinderRouter"
-  url "https://github.com/asdecided/WayfinderRouter/archive/refs/tags/router-v2026.8.0.tar.gz"
-  sha256 "88da91e17fd06c329a6004649ecca672b8f9d87ae947491562c9be3bbba8ff56"
+  url "https://github.com/asdecided/WayfinderRouter/archive/refs/tags/router-v1.0.0.tar.gz"
+  sha256 "d7ab09fde8193ce12f855a8de74870f1f929dd596991879ba028fd03b600e709"
   license "Apache-2.0"
+  version_scheme 1
 
   depends_on "rust" => :build
 
